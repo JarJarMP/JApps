@@ -2,48 +2,65 @@
 Collection of day-to-day used apps centralized into one.
 
 ## What is this all about?
-I've been using all kind of apps for my day-to-day life to manage time and todos, read articles in RSS feeds, etc. All of them are great but always short one or two features, which I really need. Also they are all separated from each other, hard to move information/data from one to the other. That's why I want to create an all-in-app, which is tailored for **my needs**. So where you see :+1:, that's a feature which will be implemented. :-1: for don't bother asking, :question: I'm thinking about it.
+I've been using all kind of apps for my day-to-day life to manage time, tasks, todos, budget, read articles from RSS feeds, etc. All of them are great but always short one or two features, which I really need. Also they are all separated from each other, hard to move information from one to the other. That is why I want to create an all-in-app, which is tailored for my needs. So this multipurpose app will be my personal assistant with different sections to contain all my stuff which is not required to be shared with others. That's why I'm not planning a Calendar app, becaues it should be a social thingy. :)
 
-## Current status
-I'm in the planning phase, writing down all the features for the apps. My goal is to create a common interface, unified UI where I can switch from to the other easy. Also a WordPress like installer is in plan too, for the non-tech people, who want to use it. That's why I will probably choose PHP+MySQL stack for the base, since most of the free hosting sites offer these.
+## Developer stack
+* MEAN
+* Angular Material
 
-## The Apps
- 
-### Calendar
-Who am I kidding, just use [Google Calendar](https://calendar.google.com/), that thing is awesome for calendar purposes! :)
+## Generic features
+* Export and import
+* User management (single user), also password protection for each and every application
+* No file uploads, no images, no pdf attachments, this is a text based application (v1)
+* Themeable design
+* Multilanguage application
+* CrossApp functionalities, like saving from rss item to bookmarks, etc
+* Desktop or mobile? both: going with responsive design
+* 24/7 running hosting: for RSS continous update
+* Cloud backup - dropbox/gdrive/etc (v2)
 
-### ToDo
-* :+1: unlimited leveles and items
-* :+1: drag-n-drop (https://github.com/bevacqua/dragula)
-* :+1: marking entries with a star
-* :-1: social thingy in any form
+## List of the apps
 
+### Budget
+* multiple wallets with selectable currencies
+* all kind of graphs for displaying income/expanse history
 
-### Budget Tracking
-* :+1: expense and income, two big section
-* :+1: categories, labels
-* :+1: all kinds of dynamic charts based on filters (labels, time)
+### Notes
+* Quick note taking section, like Google Keep
 
+### ToDos
+* Like the Notes + multi level management (drag&drop, tree display)
 
-### RSS Reader
-* :+1: folders for feeds
-* :+1: marking entries with a star
-* :+1: cleaning (manual, automatic)
-* :+1: 'offline' reading = download article (consider large and many images! maybe a config for this and a counter for occupied space on disk)
-* :-1: search
+### Diary
+* searchable
+* one entry is one day
 
-### Bookmark Manager
-* :+1: folders and labels
-* :+1: search
-* :question: extensions for Chrome, FF
+### Bookmarks
+* Browser independent bookmark management
+* Browser extension for export/import (v2)
 
-### General for all above
-* :+1: export/import into file
-* :+1: move data/information from one to other, eg. todo into expense, bookmark from rss feed
-* :+1: user management - necessary for public domains, one user only, registered locally, no social auth or other funky things
-* :question: export/import into dropbox
-* :question: support languages
+### RSSReader
+* Autoupdate - without opening the application, refreshes channels - not missing news during holidays --> 24/7 running hosting
+* Autocleanup - interval
+* Mark as Read/Unread
+* Mark as important
 
-## Contribution
-* [Contact](http://www.marotipeter.com/about/) me if you have ideas or requestes.
-* PullRequests are greate too! :)
+### ShoppingList
+* Making easier to go through the shopping list compared to simple notes
+
+### PhoneBook
+* Nothing fancy, names with numbers
+
+### CookBook
+* Text based
+* Searchable
+
+### Car
+* Petrol diary
+* Maintanence
+
+### RealestateManager
+* all information about all of your properties, like meter readings, tenants, utilities, etc
+
+### TV-Show / Movie tracking
+* ...
