@@ -1,0 +1,19 @@
+{
+  "name": "japps",
+  "version": "0.1.0",
+  "description": "Collection of day-to-day used apps centralized into one.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JarJarMP/JApps.git"
+  },
+  "author": "JarJarMP, gzsoltlevente",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/JarJarMP/JApps/issues"
+  },
+  "homepage": "https://github.com/JarJarMP/JApps#readme"
+}
