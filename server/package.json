@@ -1,10 +1,11 @@
 {
-  "name": "japps",
+  "name": "japps-server",
   "version": "0.1.0",
-  "description": "Collection of day-to-day used apps centralized into one.",
+  "description": "Server package for JApps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/JarJarMP/JApps/issues"
   },
-  "homepage": "https://github.com/JarJarMP/JApps#readme"
+  "homepage": "https://github.com/JarJarMP/JApps#readme",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-google": "^0.14.0"
+  }
 }
