@@ -1,0 +1,24 @@
+{
+  "name": "japps-client",
+  "version": "0.1.0",
+  "description": "Client package for JApps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JarJarMP/JApps.git"
+  },
+  "author": "JarJarMP, gzsoltlevente",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/JarJarMP/JApps/issues"
+  },
+  "homepage": "https://github.com/JarJarMP/JApps#readme",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
