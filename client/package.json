@@ -1,15 +1,26 @@
 {
-  "name": "client",
-  "version": "0.0.0",
+  "name": "japps-client",
+  "version": "0.1.0",
+  "description": "Client package for JApps",
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "ng lint && eslint **/*.js",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JarJarMP/JApps.git"
+  },
+  "author": "JarJarMP, gzsoltlevente",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/JarJarMP/JApps/issues"
+  },
+  "homepage": "https://github.com/JarJarMP/JApps#readme",
   "dependencies": {
     "@angular/animations": "~10.1.4",
     "@angular/common": "~10.1.4",
@@ -31,6 +42,8 @@
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^6.0.0",
+    "eslint": "^7.10.0",
+    "eslint-config-google": "^0.14.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
