@@ -2,10 +2,29 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-})
+const mock = [
+  {
+    title: 'Title 1',
+    content: 'Content 1'
+  },
+  {
+    title: 'Title 2',
+    content: 'Content 2'
+  }
+];
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get('/notes', (req, res) => {
+  res.send(mock);
+});
+
+app.post('/notes', (req, res) => {
+  mock.push(req.body);
+  res.send(mock);
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`app is listening at http://localhost:${port}`);
 });
