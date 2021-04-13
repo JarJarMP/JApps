@@ -1,7 +1,7 @@
+const config = require('./config');
 const express = require('express');
-const app = express();
-const port = 3000;
 
+const app = express();
 const mock = [
   {
     title: 'Title 1',
@@ -16,6 +16,10 @@ const mock = [
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  res.send('works');
+});
+
 app.get('/notes', (req, res) => {
   res.send(mock);
 });
@@ -25,6 +29,6 @@ app.post('/notes', (req, res) => {
   res.send(mock);
 });
 
-app.listen(port, () => {
-  console.log(`app is listening at http://localhost:${port}`);
+app.listen(config.expressPort, () => {
+  console.log(`app is listening at http://localhost:${config.expressPort}`);
 });
