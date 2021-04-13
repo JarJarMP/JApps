@@ -29,6 +29,10 @@ app.post('/notes', (req, res) => {
   res.send(mock);
 });
 
-app.listen(config.expressPort, () => {
-  console.log(`app is listening at http://localhost:${config.expressPort}`);
+app.listen(config.expressPort, err => {
+  if (err) {
+    console.log('app failed to start:', err);
+  } else {
+    console.log(`app is started and listening at http://localhost:${config.expressPort}`);
+  }
 });
