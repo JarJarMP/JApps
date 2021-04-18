@@ -1,22 +1,6 @@
-const mock = [
-  {
-    title: 'Title 1',
-    content: 'Content 1'
-  },
-  {
-    title: 'Title 2',
-    content: 'Content 2'
-  }
-];
-
-const getAllNotes = () => mock;
-
-const setOneNote = data => {
-  mock.push(data);
-  return mock;
-}
+const models = require('../models');
+const model = models.mongo;
 
 module.exports = {
-  getAllNotes,
-  setOneNote
+  ...model.notes
 };
