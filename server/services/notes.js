@@ -1,6 +1,3 @@
-const models = require('../models');
-const model = models.mongo;
-
-module.exports = {
+module.exports = model => ({
   ...model.notes
-};
+});
