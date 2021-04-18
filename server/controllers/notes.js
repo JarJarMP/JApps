@@ -2,8 +2,6 @@ class notesController {
   constructor(service, expressApp) {
     this.service = service;
     this.expressApp = expressApp;
-
-    this.initEndpoints();
   }
 
   initEndpoints() {
