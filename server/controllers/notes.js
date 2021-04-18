@@ -1,15 +1,23 @@
-const services = require('../services');
-const notesService = services.notes;
+class notesController {
+  constructor(service, expressApp) {
+    this.service = service;
+    this.expressApp = expressApp;
 
-const getAllNotes = (req, res) => {
-  res.send(notesService.getAllNotes());
+    this.initEndpoints();
+  }
+
+  initEndpoints() {
+    this.expressApp.get('/notes', this.getAllNotes.bind(this));
+    this.expressApp.post('/notes', this.setOneNote.bind(this));
+  }
+
+  getAllNotes(req, res) {
+    res.send(this.service.getAllNotes());
+  };
+
+  setOneNote(req, res) {
+    res.send(this.service.setOneNote(req.body));
+  };
 };
 
-const setOneNote = (req, res) => {
-  res.send(notesService.setOneNote(req.body));
-};
-
-module.exports = expressApp => {
-  expressApp.get('/notes', getAllNotes);
-  expressApp.post('/notes', setOneNote);
-};
+module.exports = notesController;
