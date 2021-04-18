@@ -5,11 +5,12 @@ const controllers = require('./controllers');
 
 const app = express();
 
-controllers(app);
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => res.send('works'));
+
+controllers(app);
+
 app.listen(config.expressPort, err => {
   if (err) {
     console.log('app failed to start:', err);

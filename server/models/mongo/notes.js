@@ -12,7 +12,6 @@ const mock = [
 const getAllNotes = () => mock;
 
 const setOneNote = data => {
-  console.log('setOneNote model', data);
   mock.push(data);
   return mock;
 }
