@@ -35,6 +35,8 @@
     "@ngrx/store-devtools": "^11.0.1",
     "bootstrap": "^4.6.0",
     "jquery": "^3.5.1",
+    "primeicons": "^4.1.0",
+    "primeng": "^11.4.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
