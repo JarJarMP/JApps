@@ -1,11 +1,21 @@
 const express = require('express');
+
+const config = require('./config');
+const controllers = require('./controllers');
+
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-})
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.get('/', (req, res) => res.send('works'));
+
+controllers(app);
+
+app.listen(config.expressPort, err => {
+  if (err) {
+    console.log('app failed to start:', err);
+  } else {
+    console.log(`app is started and listening at http://localhost:${config.expressPort}`);
+  }
 });

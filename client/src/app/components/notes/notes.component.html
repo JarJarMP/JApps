@@ -1,0 +1,30 @@
+<div>
+  <form [formGroup]="addNoteFormGroup" (ngSubmit)="AddNote()">
+    <label>
+      Title:
+      <input type="text" formControlName="title">
+    </label>
+    <label>
+      Content:
+      <input type="text" formControlName="content">
+    </label>
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </form>
+</div>
+
+
+<div *ngIf="error; else noError">
+  There has been an error :(
+</div>
+<ng-template #noError>
+  <div *ngFor="let note of notes">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ note.title }}</h5>
+        <p class="card-text">{{ note.content }}</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
