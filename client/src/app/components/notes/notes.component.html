@@ -1,14 +1,15 @@
+<br>
 <div>
   <form [formGroup]="addNoteFormGroup" (ngSubmit)="AddNote()">
-    <label>
-      Title:
-      <input type="text" formControlName="title">
-    </label>
-    <label>
-      Content:
-      <input type="text" formControlName="content">
-    </label>
-    <button type="submit" class="btn btn-primary">Add Note</button>
+    <span class="p-float-label">
+      <input id="float-input" type="text" pInputText formControlName="title"> 
+      <label for="float-input">Title</label>
+  </span>
+    <span class="p-float-label">
+      <input id="float-input" type="text" pInputText formControlName="content"> 
+      <label for="float-input">Content</label>
+  </span>
+  <button pButton type="submit" label="Add Note"></button>
   </form>
 </div>
 

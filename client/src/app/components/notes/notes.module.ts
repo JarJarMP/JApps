@@ -6,7 +6,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { NotesEffects } from './effects/notes.effects';
 import { NotesComponent } from './notes.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     StoreModule.forFeature(fromNotes.notesFeatureKey, fromNotes.reducer),
     EffectsModule.forFeature([NotesEffects]),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ButtonModule
   ],
   declarations: [NotesComponent]
 })
